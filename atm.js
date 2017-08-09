@@ -34,9 +34,6 @@ var cash = {
             return "not enugh cash in atm missing " + this.canDispense(sum)
 
         }
-
-
-
     },
     putout: function (give) {
         this.cashOut = []
@@ -44,7 +41,6 @@ var cash = {
 
            this.cashOut.push(give[i] + " " + this.denom[i])
         }
-       
     },
 
     cashBalance: function () { //how much money left in ATM
