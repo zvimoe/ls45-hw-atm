@@ -3,7 +3,6 @@ var cash = {
     bills: [0, 0, 0],
     addBills: function (bills) {
         this.bills = bills;
-
     },
     canDispense: function (sum) { //if ATM have enough to dispense the sum
         for (var i = this.denom.length - 1; i >= 0; i--) {
@@ -11,7 +10,6 @@ var cash = {
 
             sum -= Math.min(sum / this.denom[i], this.bills[i]) *
                 this.denom[i];
-
         }
         return sum;
     },
