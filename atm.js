@@ -14,6 +14,7 @@ var cash = {
         return sum;
     },
     dispense: function (sum) { // check if can dispense, if so call putout
+        var temp=sum;
         if (this.canDispense(sum) == 0) {
             var give = [];
             var amount = 0;
@@ -25,7 +26,7 @@ var cash = {
                     this.denom[i];
             }
             this.putout(give.reverse())
-            this.balance = amount - sum;
+            this.balance = (amount-temp);
 
         }
         else {
@@ -49,7 +50,7 @@ var cash = {
 
 cash.denom = [50, 100, 200];
 cash.addBills([5, 2, 4]);
-cash.dispense(1050)
+cash.dispense(200)
 console.log(cash.cashOut)
 console.log(cash.balance)
 
