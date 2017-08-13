@@ -6,8 +6,6 @@ var cash = {
     },
     canDispense: function (sum) { //if ATM have enough to dispense the sum
         for (var i = this.denom.length - 1; i >= 0; i--) {
-            var dave = Math.min(sum / this.denom[i], this.bills[i])
-
             sum -= Math.min(sum / this.denom[i], this.bills[i]) *
                 this.denom[i];
         }
